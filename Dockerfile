@@ -1,6 +1,18 @@
 #Modified from https://github.com/drdaeman/docker-emailrelay
 FROM alpine:3.10.2
 
+ARG BUILD_DATE
+ARG VCS_REF
+ARG VERSION
+LABEL org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.name="E-MailRelay Docker container" \
+      org.label-schema.description="" \
+      org.label-schema.url="https://github.com/NMichas/EmailRelay" \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://cloud.docker.com/repository/docker/nassos/emailrelay" \
+      org.label-schema.version=$VERSION \
+      org.label-schema.schema-version="1.0"
+
 RUN apk add --no-cache libstdc++ openssl ca-certificates \
  && update-ca-certificates
 
