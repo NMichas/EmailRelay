@@ -36,7 +36,7 @@ https://github.com/drdaeman/docker-emailrelay.
 == Usage
 Run the container with no arugments to obtain usage information:
 
-`docker run --rm nmichas/emailrelay`
+`docker run --rm nassos/emailrelay`
 
 === As an SMTP open relay server
 ==== Using Apple's mail servers
@@ -49,11 +49,11 @@ Replace `userid` with your email user id, and `password` with your email passwor
 both `userid` and
 `password` should be xtext encoded, as defined in RFC-1891, which basically means that non-alphanumeric
 characters (including space, `+`, `#` and `=`) should be represented in uppercase hexadecimal
-ascii as `+XX`. So a space should be written as +20; `++` as +2B; `#` as +23; and `=` as +3D.
+ascii as `+XX`. So a space should be written as `+20`, `+` as `+2B`, `##` as `+23`, and `=` as `+3D`.
 
 Start the container by mounting the folder to the above path and exposing port 25:
 ```
-docker run -d --restart=always -p 25:25 -v ~/emailrelay/auth:/auth nmichas/emailrelay \
+docker run -d --restart=always -p 25:25 -v ~/emailrelay/auth:/auth nassos/emailrelay \
 emailrelay \
 --log \
 --port=25 \
