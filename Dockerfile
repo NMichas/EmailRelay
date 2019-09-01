@@ -18,3 +18,5 @@ RUN apk add --no-cache --virtual .deps curl g++ make autoconf automake openssl-d
  && cd / \
  && rm -rf /tmp/build /var/tmp/* /var/cache/apk/* /var/cache/distfiles/* \
  && mkdir -p /var/spool/emailrelay
+
+ CMD emailrelay --help --verbose
