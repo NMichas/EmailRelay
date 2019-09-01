@@ -1,5 +1,5 @@
 #Modified from https://github.com/drdaeman/docker-emailrelay
-FROM alpine:latest
+FROM alpine:3.10.2
 
 RUN apk add --no-cache libstdc++ openssl ca-certificates \
  && update-ca-certificates
