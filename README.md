@@ -45,7 +45,7 @@ The latest image is also available under the _latest_ tag.
 ### Automated builds
 
 Image versions are automatically built upon pushes on project's GitHub repository
-using Docker Hub Cloud.
+using Docker Hub Cloud. If you want to learn how to automatically build your own images when you push code on GitHUb, you can have a look on my tutorial [Build your Docker images automatically when you push on GitHub](https://medium.com/@NMichas/build-your-docker-images-automatically-when-you-push-on-github-18e80ece76af).
 
 ### Attribution
 
