@@ -86,3 +86,14 @@ emailrelay \
 ```
 
 TIP: You need to generate an app-specific password, you can not use your main Apple account password to authenticate with.
+
+## Testing from CLI
+You can quickly test your configuration works as intended by sending a test email from the command-line using [swaks](http://www.jetmore.org/john/code/swaks/):
+
+```
+echo "This is the message body" | swaks \
+	--to recipient@someserver.com \
+	--from sender@someserver.com \
+	--server localhost \
+	--port 25
+```
